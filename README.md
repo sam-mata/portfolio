@@ -19,6 +19,6 @@ My personal website with personal details, contact information, and a portfolio 
 
 If you want to make a similar site, or see how this was made, installing or developing this project can be done simply with the following steps:
 
-1. Clone the repo with `gh repo clone sam-mata/website` or through [Github Desktop](x-github-client://openRepo/https://github.com/sam-mata/website).
+1. Clone the repo with `gh repo clone sam-mata/portfolio` or through [Github Desktop](x-github-client://openRepo/https://github.com/sam-mata/portfolio).
 2. Install dependencies with `pnpm install`.
 3. Run the development build with `pnpm run dev`.
