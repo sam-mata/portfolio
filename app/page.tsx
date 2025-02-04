@@ -7,7 +7,7 @@ export default function Home() {
       {/* Title */}
       <div className="md:pt-24 pt-12 md:pb-12 pb-6">
         <h1 className="md:text-7xl text-6xl font-bold tracking-tighter">
-          Kia Ora! I'm Sam.
+          Kia Ora! I{"'"}m Sam.
         </h1>
         <h2 className="md:text-7xl text-3xl font-bold tracking-tighter">
           <FlipWords words={["Researcher", "Web Developer", "Data Scientist", "Software Engineer"]} />
