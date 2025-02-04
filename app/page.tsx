@@ -1,101 +1,68 @@
-import Image from "next/image";
+import { FlipWords } from "@/components/ui/flip-words";
+import { TracingBeam } from "@/components/ui/tracing-beam";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <TracingBeam className="mx-auto px-8">
+      {/* Title */}
+      <div className="md:pt-24 pt-12 md:pb-12 pb-6">
+        <h1 className="md:text-7xl text-6xl font-bold tracking-tighter">
+          Kia Ora! I'm Sam.
+        </h1>
+        <h2 className="md:text-7xl text-3xl font-bold tracking-tighter">
+          <FlipWords words={["Researcher", "Web Developer", "Data Scientist", "Software Engineer"]} />
+        </h2>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+      {/* About Me */}
+      <div className="md:py-12 py-6">
+        <h2 className="md:text-4xl text-2xl font-bold font-CalSans tracking-tighter mb-6">
+          About Me
+        </h2>
+        <p className="font-thin text-gray-700 py-1 tracking-tight md:text-base text-sm">
+          I am a PhD Candidate currently studying at Victoria University of
+          Wellington, New Zealand, where I work with the Centre for Data Science
+          and Artificial Intelligence (CDSAI) and the Antarctic Research Centre
+          (ARC). My thesis is on the use of novel genetic programming techniques
+          for the long-term prediction of complex time-series data.
+        </p>
+        <p className="font-thin text-gray-700 py-1 tracking-tight md:text-base text-sm">
+          I previously earned a BSc in Computer Science in 2023, followed by a
+          BSc (Hons) in Artificial Intelligence in 2024, for which I received
+          First Class Honours. Most of my work has been in the fields of AI,
+          data science, and machine learning.
+        </p>
+        <p className="font-thin text-gray-700 py-1 tracking-tight md:text-base text-sm">
+          You can find several of my projects on my{" "}
+          <a href="https://github.com/sam-mata">GitHub</a>, but others are
+          available publicly online, including interactive articles on{" "}
+          <a href="https://3dai.sammata.nz/">3D AI</a>, data visualisations of{" "}
+          <a href="https://sammata.shinyapps.io/f1-app/">F1 races</a> and{" "}
+          <a href="https://covid-visualiser.vercel.app/">
+            Covid-19 transmissions
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+          , and some of my{" "}
+          <a href="https://github.com/sam-mata/BSc-Hons">
+            former research projects
           </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          .
+        </p>
+      </div>
+
+      {/* Contact */}
+      <div className="md:py-12 py-6">
+        <h2 className="md:text-4xl text-2xl font-bold font-CalSans tracking-tighter mb-6">
+          Contact
+        </h2>
+        <p className="font-thin text-gray-700 py-1 tracking-tight md:text-base text-sm">
+          I am always looking for new projects and collaborations. If you think
+          I might be able to help with your project, please get in touch through{" "}
+          <a href="mailto:sammatanz@gmail.com" className="">
+            email
+          </a>{" "}
+          or <a href="https://www.linkedin.com/in/sam-mata/">LinkedIn</a>.
+        </p>
+      </div>
+    </TracingBeam>
   );
 }
