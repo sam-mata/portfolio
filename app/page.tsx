@@ -6,11 +6,23 @@ export default function Home() {
     <TracingBeam className="mx-auto px-8">
       {/* Title */}
       <div className="md:pt-24 pt-12 md:pb-12 pb-6">
-        <h1 className="md:text-7xl text-6xl font-bold tracking-tighter">
-          Kia Ora! I{"'"}m Sam.
-        </h1>
+        <div className="md:flex gap-4">
+          <h1 className="md:text-7xl text-6xl font-bold tracking-tighter">
+            Kia Ora!
+          </h1>
+          <h1 className="md:text-7xl text-6xl font-bold tracking-tighter">
+            I{"'"}m Sam.
+          </h1>
+        </div>
         <h2 className="md:text-7xl text-3xl font-bold tracking-tighter">
-          <FlipWords words={["Researcher", "Web Developer", "Data Scientist", "Software Engineer"]} />
+          <FlipWords
+            words={[
+              "Researcher",
+              "Web Developer",
+              "Data Scientist",
+              "Software Engineer",
+            ]}
+          />
         </h2>
       </div>
 
